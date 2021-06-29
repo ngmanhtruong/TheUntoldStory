@@ -60,6 +60,18 @@
 *{
     box-sizing: border-box;
 }
+
+@keyframes sparkle{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
 body{
     font-family:'Times New Roman';
     background-color: #075f49;
@@ -129,21 +141,25 @@ section{
                     position: absolute;
                     top: 20%;
                     left: 5%;
+                    animation: sparkle ease 2s infinite;
                 }
                 &.sparkle2{
                     position: absolute;
                     bottom: 60%;
                     left: 40%;
+                    animation: sparkle ease 2.5s infinite;
                 }
                 &.sparkle3{
                     position: absolute;
                     top: 5%;
                     right: 28%;
+                    animation: sparkle ease 2s infinite;
                 }
                 &.sparkle4{
                     position: absolute;
                     bottom: 35%;
                     left: 15%;
+                    animation: sparkle ease 2.5s infinite;
                 }
             }
         }
@@ -253,11 +269,13 @@ section{
                         position: absolute;
                         bottom: 25%;
                         left: 35%;
+                        animation: sparkle ease 1.5s infinite;
                     }
                     &.sparkle2{
                         position: absolute;
                         bottom: 55%;
                         right: 30%;
+                        animation: sparkle ease 2s infinite;
                     }
                 }
                 
@@ -1030,14 +1048,17 @@ section{
                 &.sparkle1{
                     bottom: 65%;
                     left: 40%;
+                    animation: sparkle ease 2s infinite;
                 }
                 &.sparkle2{
                     bottom: 37%;
                     left: 37%;
+                    animation: sparkle ease 2.5s infinite;
                 }
                 &.sparkle3{                   
                     bottom: 70%;
                     right: 26%;
+                    animation: sparkle ease 2s infinite;
                 }
             }
             .mountain{
@@ -1203,10 +1224,12 @@ section{
                 &.sparkle1{
                     bottom: 65%;
                     left: 41%;
+                    animation: sparkle ease 2s infinite;
                 }
                 &.sparkle2{
                     bottom: 67%;
                     right: 25%;
+                    animation: sparkle ease 2.5s infinite;
                 }
             }
         }
@@ -1257,7 +1280,7 @@ section{
                 span{
                     font-family: "HLT Motion Picture";
                     color: #e5d2a5;
-                    font-size: 25px;
+                    font-size: 30px;
                 }
             }
         }

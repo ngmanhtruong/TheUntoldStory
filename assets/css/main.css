@@ -10294,6 +10294,17 @@ h3 {
   box-sizing: border-box;
 }
 
+@keyframes sparkle {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 body {
   font-family: "Times New Roman";
   background-color: #075f49;
@@ -10365,21 +10376,25 @@ section.banner .wrap .sparkle.sparkle1 {
   position: absolute;
   top: 20%;
   left: 5%;
+  animation: sparkle ease 2s infinite;
 }
 section.banner .wrap .sparkle.sparkle2 {
   position: absolute;
   bottom: 60%;
   left: 40%;
+  animation: sparkle ease 2.5s infinite;
 }
 section.banner .wrap .sparkle.sparkle3 {
   position: absolute;
   top: 5%;
   right: 28%;
+  animation: sparkle ease 2s infinite;
 }
 section.banner .wrap .sparkle.sparkle4 {
   position: absolute;
   bottom: 35%;
   left: 15%;
+  animation: sparkle ease 2.5s infinite;
 }
 section.section2 {
   margin-top: -150px;
@@ -10482,11 +10497,13 @@ section.title.title1 .wrap .sparkle.sparkle1 {
   position: absolute;
   bottom: 25%;
   left: 35%;
+  animation: sparkle ease 1.5s infinite;
 }
 section.title.title1 .wrap .sparkle.sparkle2 {
   position: absolute;
   bottom: 55%;
   right: 30%;
+  animation: sparkle ease 2s infinite;
 }
 section.gallery {
   padding: 50px 50px 100px;
@@ -11325,14 +11342,17 @@ section.title3 .wrap .sparkle {
 section.title3 .wrap .sparkle.sparkle1 {
   bottom: 65%;
   left: 40%;
+  animation: sparkle ease 2s infinite;
 }
 section.title3 .wrap .sparkle.sparkle2 {
   bottom: 37%;
   left: 37%;
+  animation: sparkle ease 2.5s infinite;
 }
 section.title3 .wrap .sparkle.sparkle3 {
   bottom: 70%;
   right: 26%;
+  animation: sparkle ease 2s infinite;
 }
 section.title3 .wrap .mountain {
   position: absolute;
@@ -11506,10 +11526,12 @@ section.title4 .wrap .sparkle {
 section.title4 .wrap .sparkle.sparkle1 {
   bottom: 65%;
   left: 41%;
+  animation: sparkle ease 2s infinite;
 }
 section.title4 .wrap .sparkle.sparkle2 {
   bottom: 67%;
   right: 25%;
+  animation: sparkle ease 2.5s infinite;
 }
 @media (max-width: 1367px) {
   section.text5 {
@@ -11559,5 +11581,5 @@ section.author .wrap .item p {
 section.author .wrap .item span {
   font-family: "HLT Motion Picture";
   color: #e5d2a5;
-  font-size: 25px;
+  font-size: 30px;
 }

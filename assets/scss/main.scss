@@ -78,6 +78,40 @@ body{
     line-height: 1.5;
     overflow-x: hidden;
 }
+
+.progress-bar{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b674e;
+    transition: all ease 1s;
+    .bar{
+        width: 50vw;
+        height: 10px;
+        background-color: #e3d6b6;
+        position: relative;
+        border-radius: 10px;
+        .progress{
+            height: 100%;
+            width: 0%;
+            background-color: #085f49;
+        }
+        span{
+            display: inline-block;
+            text-align: center;
+            position: relative;
+            top: 0%;
+            left: 0%;
+            transform: translate(-50%, 50%);
+        }
+    }
+}
 .pageheader{
     position:fixed;
     width: 100%;
@@ -181,6 +215,7 @@ section{
                     text-align: center;
                     color: #e5d2a5;
                     font-weight: bold;
+                    opacity: 0;
                 }
                 img{
                     width: 100%;
@@ -188,6 +223,7 @@ section{
                 }
                 .image{
                     position: absolute;
+                    opacity: 0;
                     &.img1{
                         top: 0%;
                         left: -30%;
@@ -211,6 +247,7 @@ section{
     }
     &.text{
         &.text1{
+            opacity: 0;
             .col-xl-6{
                 margin: 0 auto;
                 .wrap{
@@ -226,6 +263,7 @@ section{
             }
         }
         &.text2{
+            opacity: 0;
             font-size: 18px;
             color: white;
             line-height: 1.5;
@@ -243,12 +281,14 @@ section{
                 .image{
                     margin: 0 auto;
                     max-width: 1920px;
+                    opacity: 0;
                     img{
                         width: 100%;
                         display: block;
                     }
                 }
                 .cloud{
+                    opacity: 0;
                     img{
                         width: 100%;
                         display: block;
@@ -259,6 +299,7 @@ section{
                     right: 0%;
                 }
                 .sparkle{
+                    opacity: 0;
                     img{
                         width: 100%;
                         display: block;
@@ -293,11 +334,9 @@ section{
             margin: 0 auto 0;
             position: relative;
             .cards{
-                
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-                
                 .cards-wrap{
                     width: calc(20% - 20px);
                     position: relative;
@@ -316,6 +355,7 @@ section{
                         width: 100%;
                     }
                     .next{
+                        opacity: 0;
                         img{
                             width: 100%;
                             display: block;
@@ -343,6 +383,7 @@ section{
                         border-style: none;
                         position: relative;
                         overflow-x: hidden;
+                        opacity: 0;
                         @media (max-width: 1025px){
                             overflow-y: hidden;
                         }
@@ -567,38 +608,34 @@ section{
                     position: relative;
                     .content1{
                         position: relative;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
                         .text{
-                            padding-right: 50%;
+                            width: 50%;
+                            opacity: 0;
                             @media (max-width: 767px){
                                 width: 100%;
                                 padding-right: 0;
                             }
                         }
                         .image{
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            width: 50%;
-                            transform: translate(10px, -95px);
+                            opacity: 0;
+                            width: 40%;
                             img{
                                 width: 100%;
                                 display: block;
                             }
-                            @media (max-width: 1367px){
-                                transform: translate(10px, 120px);
-                            }
-                            @media (max-width: 1025px){
-                                transform: translate(10px, -98px) scale(0.9);
-                            }
-                            @media (max-width: 769px){
-                                transform: translate(-5px, 25px) scale(1);
-                            }
                             @media (max-width: 767px){
                                 display: none;
-                                width: 0%;
+                                width: 100%;
                             }
                         }
                         
+                    }
+                    .text{
+                        padding-top: 20px;
+                        opacity: 0;
                     }
                     .item{
                         @media (max-width: 1025px){
@@ -633,9 +670,13 @@ section{
         }
         .wrap{
             position: relative;
+            .image{
+                opacity: 0;
+            }
             .item{
                 width: 3vw;
                 min-width: 60px;
+                opacity: 0;
                 &.item1{
                     position: absolute;
                     bottom: 40%;
@@ -655,6 +696,7 @@ section{
             .col-xl-6{
                 margin: 0 auto;
                 &.text{
+                    opacity: 0;
                     color:white;
                     font-size: 18px;
                 }
@@ -678,9 +720,11 @@ section{
                 .container{
                     position: relative;
                     // overflow: hidden;
+                    opacity: 0;
                     .swiper{
                         position: relative;
                         .slide{
+                            transition: ease 1s;
                             position: absolute;
                             // display: none;
                             display: flex;
@@ -898,11 +942,13 @@ section{
             .wrap{
                 .container{
                     .swiper2{
+                        opacity: 0;
                         img{
                             display: block;
                             width: 100%;
                         }
                         .block{
+                            transition: ease 0.5s;
                             display: flex;
                             flex-wrap: wrap;
                             &.block2{
@@ -972,6 +1018,7 @@ section{
                     }
                     .btn{
                         width: 70px;
+                        opacity: 0;
                         img{
                             width: 100%;
                             display: block;
@@ -1090,6 +1137,7 @@ section{
                 flex-wrap: wrap;
                 justify-content: center;
                 .item{
+                    opacity: 0;
                     &.item1{
                         width: 35%;
                         text-align: right;
@@ -1134,6 +1182,7 @@ section{
                     flex-wrap: wrap;
                     padding: 0 0 55px 0;
                     .text{
+                        opacity: 0;
                         width: 50%;
                         font-size: 22px;
                         color:white;
@@ -1144,6 +1193,7 @@ section{
                         
                     }
                     .quote{
+                        opacity: 0;
                         width: 40%;
                         font-size: 21px;
                         color: #e5d2a5;
@@ -1167,6 +1217,9 @@ section{
                         padding: 0 0 20px 0;
                     }
                 }
+                p{
+                    opacity: 0;
+                }
             }
         }
     }
@@ -1182,6 +1235,7 @@ section{
                     display: block;
                 }
                 .item{
+                    opacity: 0;
                     &.item1{
                         width: 35%;
                         padding:0 50px 0 50px;
@@ -1215,6 +1269,7 @@ section{
                 display: block;
             }
             .item{
+                opacity: 0;
                 margin: 0 auto;
             }
             .sparkle{
@@ -1246,7 +1301,9 @@ section{
             .wrap{
                 color: white;
                 font-size: 22px;
-                
+                p{
+                    opacity: 0;
+                }
                 .underline{
                     color: #e5d2a5;
                     font-size: 22px;
@@ -1273,6 +1330,7 @@ section{
         .wrap{
             .item{
                 text-align: center;
+                opacity: 0;
                 p{
                     color: white;
                     font-size: 22px;
